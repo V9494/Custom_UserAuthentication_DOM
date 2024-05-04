@@ -30,5 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         .catch((value) => console.log('User press Reject', value));
                 });
             });
-    }, 5000);
+    }, 800);
+    
 });
