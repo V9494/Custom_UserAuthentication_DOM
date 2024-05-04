@@ -1,0 +1,320 @@
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.container{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+
+.card{
+  height: 24rem;
+  width: 20rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: white;
+  padding: 14px;
+  gap: 40px;
+}
+.card>h3{
+  font-size: 20px;
+  margin: -26px 4px;
+  color: #3e10e2;
+}
+
+.card>img{
+  width: 100%;
+  border-radius: 10px;
+}
+
+
+.card>#watch-lessons{
+  height: 2rem;
+  width: 18rem;
+  border: none;
+  background: #3e10e2;
+  border-radius: 9px;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 6px;
+}
+
+.card>#watch-lessons:hover{
+  color: rgb(253, 242, 242);
+  background: #220684;
+}
+
+.card>h2{
+  font-weight: 800;
+  margin: -19px 0px;
+}
+
+
+
+
+#openModal{
+    border: none;
+  font-size: 2rem;
+  padding: 2rem;
+  border-radius: 2rem;
+  background-color: #dc77dc;
+  margin: 1rem 1rem;
+  box-shadow: 21px 5px 10px black;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+
+#openModal:hover{
+    background-color: #5c055c;
+    color: white;
+}
+
+.backgroundOverly{
+    background-color: rgba(0, 0, 0, 0.715);
+    position: fixed;
+    top:0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.4s;  /*Fade in effect*/
+}
+
+.backgroundOverly .open{
+    opacity: 0;
+}
+
+.backgroundOverly .modalCard{
+    height: 28rem;
+  width: 28rem;
+  background-color: white;
+  position: fixed;
+  text-align: center;
+  padding: 4rem;
+  box-shadow: 14px 11px 35px -6px #ff3405;
+  transition: transform 0.6s ease-in;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+.backgroundOverly .front{
+    height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 77px;
+  backface-visibility: hidden;
+}
+
+.backgroundOverly .back{
+    height: 100%;
+  width: 100%;
+  background-color: rgb(228, 240, 232);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 33px;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+
+
+.backgroundOverly .textTitle{
+    font-weight: 900;
+  font-size: 2rem;
+  background: #ff00004d;
+  border-radius: 6px;
+  color: black;
+  border: 1px solid black;
+  margin-top: 10px;
+  padding: 2px;
+  box-shadow: 4px 4px 60px #FFA31A;
+}
+
+.backgroundOverly .textMessage{
+    margin: 1.8rem auto;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 1rem;
+  font-family: sans-serif;
+  box-shadow: 7px 6px 27px #ff00001f;
+  margin: 56px auto;
+}
+
+.backgroundOverly .cancelButtonText{
+    height: 2rem;
+    width: 6rem;
+    border: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-right: 3rem;
+    border-radius: 4px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    box-shadow: 2px 3px 10px red;
+    transition: all 0.25s ease;
+}
+
+ .cancelButtonText:hover{
+    transition: all 0.25s ease;
+    background-color: rgb(215, 14, 14);
+    color: rgba(255, 255, 255, 0.977);
+}
+
+.backgroundOverly .confirmButtonText{
+    height: 2rem;
+    width: 6rem;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    /* margin-right: 3rem; */
+    border-radius: 4px;
+    background-color: rgb(15, 223, 15);
+    color: white;
+    cursor: pointer;
+    box-shadow: 5px 4px 9px rgb(0, 255, 0);
+    transition: all 0.25s ease;
+}
+
+.confirmButtonText:hover{
+    transition: all 0.25s ease;
+    background-color: rgb(21, 168, 21);
+    color: rgba(255, 255, 255, 0.977);
+}
+
+.Score-Card{
+    display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 9px;
+  margin-bottom: 10px;
+  color: #ff8503;
+  
+}
+
+.WackAmoleInfo{
+    font-family: "Press Start 2P", system-ui;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 9px;
+  margin-bottom: 10px;
+  color: #ff8503;
+  margin-top: 17px;
+}
+
+.grid{
+  height: 87%;
+  width: 100%;
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  filter: drop-shadow(4px 6px 2px #f56a05);
+}
+.square{
+    height: 146px;
+  width: 162px;
+  background: white;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+
+.mole{
+    height: 146px;
+  width: 162px;
+  background-image: url(Mole.png);
+  background-size: cover;
+  border: 1px solid black;
+}
+
+.mole:hover{
+  background-color: #f5690550;
+}
+
+.flipped{
+    transform: rotateY(180deg);
+}
+
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #7ac142;
+  fill: none;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  margin: 10% auto;
+  box-shadow: inset 0px 0px 0px #7ac142;
+  animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes scale {
+  0%, 100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+
+@keyframes fill {
+  100% {
+    box-shadow: inset 0px 0px 0px 30px #7ac142;
+  }
+}
